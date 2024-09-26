@@ -1,4 +1,4 @@
-from library import Library
+from .library import Library
 
 def main():
     library = Library()
@@ -18,12 +18,9 @@ def main():
         if choice == '1':
             title = input("Enter book title: ")
             author = input("Enter book author: ")
-            # publication_year=input("Enter the publication year")
-            # publication_year=in
-            publication_year=input("Enter the publication year")
+            publication_year = input("Enter the publication year: ")
             isbn = input("Enter book ISBN: ")
-
-            book = library.add_book(title, author,publication_year,isbn)
+            book = library.add_book(title, author, publication_year, isbn)
             print(f"Book added: {book}")
 
         elif choice == '2':
